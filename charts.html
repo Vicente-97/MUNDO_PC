@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MUNDO PC</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+
+        .alto{
+            float: right
+;
+        }
+        .lateral{
+            background:#52c8e6;
+            
+        }
+
+        .lateral_2{
+            background-color: rgb(250, 173, 145);
+        }
+
+        .imagen{
+            width: 500px; height: 300px;
+            
+
+        }
+    </style>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" >
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">MUNDO PC <img src="logo_bien.png" width="50px" height="50px"></a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Opciones</a></li>
+                        <li><a class="dropdown-item" href="#!">Actividad</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Portal de informacion</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Mundo PC
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Noticias</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Informacion y Noticias
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html"> Informacion de Componentes</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-sidenav-light.html"> PC Premontados</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="ram.html"> Modulos RAM</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="perifericos.html"> Perifericos</a>
+                                    
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Acceso
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autentificacion
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Registrate</a>
+                                            <a class="nav-link" href="password.html">Olvidaste la contraseña</a>
+                                        </nav>
+                                    </div>
+                                   
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Zona Contacto</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Contacto
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Estas ahora mismo en:</div>
+                        MUNDO PC 
+                        <a class="btn" href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="align"></div>
+
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white alto" style="width: 380px;">
+                            <a href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                              <span class="fs-5 fw-semibold"><h2 class="display-6">Lista de Novedades</h2></span>
+                            </a>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                              <a href="" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between ">
+                                  <strong class="mb-1">
+                                    Los precios de los componentes de PC podrían no bajar nunca</strong>
+                                  <small></small>
+                                </div>
+                                <div class="col-10 mb-1 small">No hay que ser muy inteligente para entender hacia dónde va la industria: aumento de precio constante y paulatino de cualquier componente para PC que integre un semiconductor. El problema es que la industria subcontrata a otras empresas que a su vez necesitan a subsidiarias que trabajan con materias primas donde hoy todavía están en déficit en cuanto a oferta y demanda, pero cuando logren igualarlas es poco probable que los precios bajen.</div>
+                              </a>
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Hasta 64 Cores y 4,5 GHz, así serán los AMD Threadripper 5000</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">De los datos filtrados de los Threadripper 5000 «Chagali» lo que sorprende es la cantidad de memoria caché de tercer nivel, los rumores hablaban de la integración a última hora de la V-Cache, sin embargo, no ha sido así y como se puede ver la cantidad de esta caché por CCD es la misma que la de un Zen 3 estándar.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Samsung no cumple con NVIDIA: no habrá suficiente stock de RTX 30</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Samsung no está centrada en ampliar la capacidad de producción de este nodo mediante nuevas Fab. En cambio y contrariamente a lo que se piensa, sí que está a punto de construir varias más para los siguientes nodos de alto rendimiento. Es decir, no va a cumplir con la tasa de producción que requiere NVIDIA y por lo tanto el suministro de GPUs RTX 30 será el mismo hasta que la compañía cierre el grifo para dar vida a las RTX 40 con los 5 nm de TSMC.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral_2">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Ofertón en la CPU Intel Core i5-11400 ¡jamás ha estado tan barato!</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Si miramos atrás allá por estas fechas en el año pasado nos acordaremos de que este procesador fue lanzado al mercado con un precio que rondaba los 200 euros, siendo su MSRP 182 dólares. Un año después Alder Lake lo ha cambiado todo y ahora podemos disfrutar de la potencia generacional de este Core 11 a un precio que no lo podíamos creer cuando lo hemos visto.</div>
+                              </a>
+                              
+                            </div>
+                          </div>
+                        <h1 class="mt-4">MUNDO PC</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"> Contacta con Nosotros</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Contacta con nosotros</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           
+                           
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.442242414825!2d-5.874638684412004!3d37.54464323313878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd125ce603bed70f%3A0xcd0e9d8b39d715f0!2sInstituto%20de%20Educaci%C3%B3n%20Secundaria%20Jacarand%C3%A1!5e0!3m2!1ses!2ses!4v1644173652499!5m2!1ses!2ses" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="mucho-trabajo-avanti.gif" class="img-fluid rounded img-thumbnail imagen" >
+                            </div>
+                        </div>
+                        <div class="container-fluid py-2 bg-dark text-white form-group" >
+                            
+                                <h1 class="display-3 text-white  align-items-justify ">
+                                    Formulario de contacto
+                                </h1>
+                                <hr color="white">
+                                
+                                <form action="https://iesjacaranda.es/lmsgi/resultado.php" method="get">
+                                        
+                                        <fieldset><legend>Datos de contacto</legend>
+                                            
+                                            <p>
+                                                Nombre: <input type="text"  size="20" name="Nombre" placeholder="Escriba su Nombre">
+                                            </p>
+                                            <p>
+                                                Apellido: <input type="text"  size="30"  name="apellido" placeholder="Escriba su Apellido">
+                                            </p>
+                                            <p>
+                                                Correo Electronico: <input type="mail"  size="30"  name=" correo"placeholder="Escriba su Email">
+                                            </p>
+                                            <p>Año de nacimiento: <input type="number" name="nacido" min="1900" naame=" año nacimiento" placeholder="Introduzca su año de nacimiento"></p>
+
+                                            <p>Sexo:
+                                                <input type="radio" name="hm" value="h"> Hombre
+                                                <input type="radio" name="hm" value="m"> Mujer
+                                              </p>
+
+                                            <p><textarea name="texto" rows="4" cols="35"  placeholder="Escribe el motivo de la consulta"></textarea></p>
+
+                                            <p>Adjunte su CV: <input type="file" name="Fyle_2"></p>
+
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                            <button type="reset" class="btn btn-danger">Reiniciar</button>
+
+                                        </fieldset>
+
+                                </form>
+
+                                <p class="text-white">
+                                    <br>Gracias por contactar con nosotros, será atendido por email en la mayor brevedad de tiempo posible.
+
+                                    Atentamente: El equipo de MUNDO PC.
+                                </p>
+
+                                
+                        </div>
+
+
+
+                            
+
+                        
+                            
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

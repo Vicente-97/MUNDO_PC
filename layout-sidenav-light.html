@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MUNDO PC</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <style>
+
+        .alto{
+            float: right
+;
+        }
+        .lateral{
+            background:#52c8e6;
+            
+        }
+
+        .lateral_2{
+            background-color: rgb(250, 173, 145);
+        }
+
+        .imagen{
+            width: auto; height: auto;
+            
+
+        }
+    </style>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" >
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">MUNDO PC <img src="logo_bien.png" width="50px" height="50px"></a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Opciones</a></li>
+                        <li><a class="dropdown-item" href="#!">Actividad</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Portal de informacion</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Mundo PC
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Noticias</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Informacion y Noticias
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html"> Informacion de Componentes</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-sidenav-light.html"> PC Premontados</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="ram.html"> Modulos RAM</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="perifericos.html"> Perifericos</a>
+                                    
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Acceso
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autentificacion
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Registrate</a>
+                                            <a class="nav-link" href="password.html">Olvidaste la contraseña</a>
+                                        </nav>
+                                    </div>
+                                    
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Zona Contacto</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Contacto
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Estas ahora mismo en:</div>
+                        MUNDO PC 
+                        <a class="btn" href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="align"></div>
+
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white alto" style="width: 380px;">
+                            <a href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                              <span class="fs-5 fw-semibold"><h2 class="display-6">Lista de Novedades</h2></span>
+                            </a>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                              <a href="" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between ">
+                                  <strong class="mb-1">
+                                    Los precios de los componentes de PC podrían no bajar nunca</strong>
+                                  <small></small>
+                                </div>
+                                <div class="col-10 mb-1 small">No hay que ser muy inteligente para entender hacia dónde va la industria: aumento de precio constante y paulatino de cualquier componente para PC que integre un semiconductor. El problema es que la industria subcontrata a otras empresas que a su vez necesitan a subsidiarias que trabajan con materias primas donde hoy todavía están en déficit en cuanto a oferta y demanda, pero cuando logren igualarlas es poco probable que los precios bajen.</div>
+                              </a>
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Hasta 64 Cores y 4,5 GHz, así serán los AMD Threadripper 5000</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">De los datos filtrados de los Threadripper 5000 «Chagali» lo que sorprende es la cantidad de memoria caché de tercer nivel, los rumores hablaban de la integración a última hora de la V-Cache, sin embargo, no ha sido así y como se puede ver la cantidad de esta caché por CCD es la misma que la de un Zen 3 estándar.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Samsung no cumple con NVIDIA: no habrá suficiente stock de RTX 30</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Samsung no está centrada en ampliar la capacidad de producción de este nodo mediante nuevas Fab. En cambio y contrariamente a lo que se piensa, sí que está a punto de construir varias más para los siguientes nodos de alto rendimiento. Es decir, no va a cumplir con la tasa de producción que requiere NVIDIA y por lo tanto el suministro de GPUs RTX 30 será el mismo hasta que la compañía cierre el grifo para dar vida a las RTX 40 con los 5 nm de TSMC.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral_2">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Ofertón en la CPU Intel Core i5-11400 ¡jamás ha estado tan barato!</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Si miramos atrás allá por estas fechas en el año pasado nos acordaremos de que este procesador fue lanzado al mercado con un precio que rondaba los 200 euros, siendo su MSRP 182 dólares. Un año después Alder Lake lo ha cambiado todo y ahora podemos disfrutar de la potencia generacional de este Core 11 a un precio que no lo podíamos creer cuando lo hemos visto.</div>
+                              </a>
+                              
+                            </div>
+                        </div>
+                        <h1 class="mt-4">PC Premontados</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"> Informacion Productos</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Pc Componentes</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4  col-lg-4 col-md-4 col-sm-4">
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body">Nitro PC</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="card bg-dark text-white mb-4">
+                                    <div class="card-body">Pc Specialist</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="pc_para_streaming_gaming.jpg" class="img-fluid rounded img-thumbnail imagen"  >
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="pc_gamer.jpg" class="img-fluid rounded img-thumbnail imagen " >
+                            </div>
+                        </div>
+                        <div class="container-fluid py-4 bg-dark" >
+                            
+                                <h1 class="display-3 text-white  align-items-justify py-2">
+                                    Todo lo que necesitas saber sobre los PC Gaming
+                                </h1>
+                                <p class="lead text-white text-justify">
+                                    A pesar de que poco a poco se va estabilizando el mercado de componentes gaming de escritorio, los precios siguen muy por encima de lo que deberían. Por no hablar de los constantes problemas de stock que nos están tocando vivir, y que hacen que sea complicado adquirir las piezas que nosotros quisiéramos.<br>
+
+                                    <br>Menos mal que los portátiles gaming están resultando una sorprendente alternativa tanto para jugar como para trabajar, gracias que encontramos multitud de modelos con hardware de última generación con los que ir capeando el temporal. Y además, en muchas ocasiones encontramos ofertas de lo más interesantes<br>
+                                </p>
+
+                                <p class="lead text-white text-justify">
+                                    Aun así, si queremos un PC gaming y no valoramos pasarnos a modelos portátiles, sino que necesitamos que se trate de equipos sobremesa sí o sí, tenemos algunas formas de conseguirlos. Una de ellas es configurar y comprar un PC completo en tiendas especializadas, en cuyo caso es más sencillo acceder al poco stock de gráficas que hay actualmente. Y la otra es adquirir un PC ya montado.<br>
+
+                                    <br>De modo que si nos decantamos por esta segunda opción, a continuación veremos cuáles son los aspectos donde debemos fijarnos con más atención y repasaremos algunos de los modelos más interesantes que encontramos en el mercado en estos momentos.
+                                </p>
+                            
+                               
+                                <h2 class="display-3 text-white  align-items-justify py-2">
+                                    Todo gira en torno a la tarjeta gráfica
+                                </h2>
+
+                                <p class="lead text-white text-justify">
+                                    Lo vayamos a usar exclusivamente para jugar o no, el PC que compremos tiene que incluir una gráfica lo suficientemente solvente como para mover los juegos. Así que, independientemente de si somos jugadores habituales u ocasionales, debemos prestar atención a cuál es la tarjeta que cada modelo incorpora.<br>
+                                </p>
+
+                                <p>
+                                    <img src="tarjetita.jpg"  class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                </p>
+
+
+                                <p class="lead text-white text-justify">
+                                    Generalmente, cualquiera de la presente generación y de la pasada, tanto de AMD como de NVIDIA, nos servirá para jugar. Pero no todos los juegos son iguales, y las exigencias de cada usuario, tampoco. Por lo que dependiendo de a qué queramos aspirar y a los títulos que queramos jugar, tendremos que decantarnos por una gráfica u otra.<br>
+                                    <br>En resumidas cuentas, podríamos decir que con cualquier RTX de la serie 2000 de NVIDIA iremos bien para jugar a 1080p con una tasa de fotogramas por segundo que oscile entre 60 y 144 (los estándares más extendidos hoy en día). Si queremos dar el salto al 1440p, sería interesante decantarnos por alguna RTX 3000 de gama media, como la 3060 Ti o 3070. Y si definitivamente vamos a por el 4K, las RTX 3080, 3080 Ti y 3090 son las opciones ideales.<br>
+
+                                </p>
+
+                                <h2 class="display-3 text-white  align-items-justify py-2">
+                                    El procesador también es importante
+                                </h2>
+
+                                <p class="lead text-white text-justify">
+
+                                    Sin resultar tan importante como la tarjeta gráfica en lo que a jugar se refiere, pero igualmente fundamental, tenemos el procesador. Generalmente suele ser la GPU el factor limitante, aunque en ciertos juegos es la CPU la que recibe una mayor carga de trabajo. Sobre todo en resoluciones más bajas. Es por ello que un buen equipo gaming que se precie en pleno 2021 debe tener un procesador a la altura.<br>
+                                </p>
+
+                                <p>
+                                    <img src="procesador.jpg"  class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                </p>
+
+                                <p class="lead text-white text-justify">
+
+                                    En este sentido, los fabricantes de equipos montados introducen procesadores perfectamente solventes, a lo que hay que sumar que es un componente con menores problemas de sobreprecios y stock que las GPU. Aquí lo ideal es contar con un chip con un mínimo de 6 núcleos y 12 hilos, para que no nos quedemos cortos de cara al futuro. Aunque si podemos dar el salto a uno con 8/16, mejor que mejor.<br>
+
+                                    <br>El único aspecto que más difiere entre unos equipos y otros, y donde juega un papel fundamental la preferencia de cada usuario, es la elección de la marca; AMD e Intel son quienes monopolizan el mercado de escritorio, y decantarse por una u otra pasa a menudo por gustos. En líneas generales, desde un Intel Core i5-11400 o más, iremos más que sobrados para jugar; en lo que respecta a AMD, el corte estaría en un Ryzen 5 3600. Y si la CPU elegida es de la última generación, mejor que mejor.
+                                </p>
+
+                                <h2 class="display-3 text-white  align-items-justify py-2">
+                                    No nos olvidemos de la RAM y el almacenamiento
+                                </h2>
+
+                                <p class="lead text-white text-justify">
+
+                                    Dos aspectos que también pueden marcar la diferencia entre un equipo solvente y uno frustrante son las memorias RAM y el almacenamiento interno. La primera juega un papel fundamental en la cantidad de fotogramas por segundo que podemos alcanzar en cada juego. Y el segundo, por su parte, puede limitarnos en cuanto a la cantidad de juegos (y aplicaciones) que podamos instalar, así como la velocidad de los tiempos de carga.<br>
+
+                                    <br>El estándar actual de la RAM está bastante claro: 16 GB es la cantidad óptima en relación calidad precio. Menos, puede limitarnos en algunos juegos. Y más siempre es bienvenido. Es por ello que en prácticamente cualquier equipo gaming premontado encontramos esos 16 GB.
+                                </p>
+
+                                <p>
+                                    <img src="GSKILL.jpg"  class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                </p>
+
+
+                                <p class="lead text-white text-justify">
+
+                                    En cuanto al almacenamiento, la capacidad depende en gran medida de las necesidades de cada usuario. Porque ya sabemos que no todos los juegos ocupan lo mismo; existen algunos muy livianos y, otros, tremendamente demandantes de espacio como Call of Duty: Warzone con sus sucesivas actualizaciones. Entonces, para el sistema operativo, las aplicaciones básicas y algún que otro, con en torno a los 500 GB no tendremos mayores problemas. Aunque si queremos instalar cuantas más cosas, mejor, lo ideal sería dar el salto a 1 TB o más. <br>
+                                    <br>Lo que sí es un must have hoy en día es que el tipo de almacenamiento pase por unidades de estado sólido. Incluso más allá: discos duros M.2 NVMe, de esos que se conectan directamente a las placas base compatibles y que ofrecen las mayores velocidades de lectura y escritura del mercado. La diferencia entre usar alguno de estos y un HDD clásico la encontramos en los tiempos de carga en programas y juegos, que se recortan hasta límites sorprendentes.
+                                </p>
+
+                                <h2 class="display-3 text-white  align-items-justify py-2">
+                                    Otros aspectos a tener en cuenta
+                                </h2>
+
+                                <p class="lead text-white text-justify">
+
+                                    Finalmente, y a pesar de que lo visto arriba es lo principal en un equipo gaming (y en cualquier otro tipo, en realidad), existen otros tantos aspectos a tener en cuenta. Aquí entran en juego componentes como la placa base; dependiendo de la marca y el modelo, podemos acceder a un mayor número de puertos de cara a ampliaciones futuras, así como contar con mejores opciones de refrigeración de los VRM, entre otros.<br>
+                                    También resultan vitales todos aquellos detalles que tengan que ver con la refrigeración. Tanto la caja del ordenador como el sistema de disipación de la CPU han de ser lo suficientemente solventes como para mantener las temperaturas a raya en los momentos en los que el equipo está trabajando a pleno rendimiento y, por tanto, generando una gran cantidad de calor.<br>
+
+                                    <br>Por último, componentes como la fuente de alimentación (prestando atención a su potencia, calidad y certificación) o añadidos como iluminación RGB, pueden resultar puntos diferenciales para los usuarios, haciendo que terminen de decantarse (o no) por ellos. Y ahora sí, vamos a ver algunos de los mejores ordenadores gaming ya montados que encontramos en el mercado en estos momentos.
+                                </p>
+
+                                <h3 class="display-3 text-white  align-items-justify py-2">
+                                    Ejemplos de PC Premontados de Alta calidad
+                                </h3>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-warning"><a href="https://www.pccomponentes.com/pccom-gold-intel-core-i5-10400f-16gb-480gbssd-1tb-rtx3060?utm_source=657549&utm_medium=afi&utm_campaign=www.3djuegospc.com&awc=20981_1644619382_fcabf1a08eb23c04a4975e96b466a095&utm_term=deeplink&utm_content=">PcCom Gold Intel Core i5 </a></li>
+                                    <li class="list-group-item bg-warning"><a href="https://www.pccomponentes.com/pccom-gold-intel-core-i7-11700k-16gb-500gbssd-1tb-rtx3070?utm_source=657549&utm_medium=afi&utm_campaign=www.3djuegospc.com&awc=20981_1644619848_5b833b3bb906395fd5c6e40141513799&utm_term=deeplink&utm_content=">PcCom Gold Intel Core i7 </a></li>
+                                    <li class="list-group-item bg-info"><a href="https://www.nitro-pc.es/pc-gaming/11-206655-elite.html"> Nitro PC -Élite Silver</a></li>
+                                    <li class="list-group-item bg-info"><a href="https://www.nitro-pc.es/pc-gaming/11-206710-elite.html"> Nitro PC -Élite GOLD</a></li>
+                                    <li class="list-group-item bg-danger"><a href="https://www.pcspecialist.es/ver/PULSAR-PRO/"> PC Specialist - PULSAR PRO</a></li>
+                                  </ul>
+
+                                  <h4 class="display-5 text-white  align-items-justify py-2">
+                                    Ejemplos de Webs de Configurador de PC
+                                </h4>
+
+                                <ol class="text-white">
+                                    <li><a href="https://www.pccomponentes.com/">PC componentes</a></li>
+                                    <li><a href="https://www.pcspecialist.es/"> PC Specialist</a></li>
+                                    <li><a href="https://www.nitro-pc.es/">Nitro PC</a></li>
+                                </ol>
+
+                                
+                            
+                        </div>
+
+
+
+
+
+                        <div class="card mb-4">
+                            
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

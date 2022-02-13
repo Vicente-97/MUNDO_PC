@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MUNDO PC</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css%22%3E">
+    </head>
+    <style>
+
+        .alto{
+            float: right
+;
+        }
+        .lateral{
+            background:#52c8e6;
+            
+        }
+
+        .lateral_2{
+            background-color: rgb(250, 173, 145);
+        }
+
+        .imagen{
+            width: auto; height: auto;
+            
+
+        }
+    </style>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" >
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">MUNDO PC <img src="logo_bien.png" width="50px" height="50px"></a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Opciones</a></li>
+                        <li><a class="dropdown-item" href="#!">Actividad</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Portal de informacion</div>
+                            <a class="nav-link" href="index.html">
+                            
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Mundo PC
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Noticias</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                               
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Informacion y Noticias
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html"> Informacion de Componentes</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-sidenav-light.html"> PC Premontados</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="ram.html"> Modulos RAM</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="perifericos.html"> Perifericos</a>
+                                    
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Acceso
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autentificacion
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Registrate</a>
+                                            <a class="nav-link" href="password.html">Olvidaste la contraseña</a>
+                                        </nav>
+                                    </div>
+                                   
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Zona Contacto</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Contacto
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Estas ahora mismo en:</div>
+                        MUNDO PC 
+                        <a class="btn" href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="align"></div>
+
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white alto" style="width: 380px;">
+                            <a href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                              <span class="fs-5 fw-semibold"><h2 class="display-6">Lista de Novedades</h2></span>
+                            </a>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                              <a href="" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between ">
+                                  <strong class="mb-1">
+                                    Los precios de los componentes de PC podrían no bajar nunca</strong>
+                                  <small></small>
+                                </div>
+                                <div class="col-10 mb-1 small">No hay que ser muy inteligente para entender hacia dónde va la industria: aumento de precio constante y paulatino de cualquier componente para PC que integre un semiconductor. El problema es que la industria subcontrata a otras empresas que a su vez necesitan a subsidiarias que trabajan con materias primas donde hoy todavía están en déficit en cuanto a oferta y demanda, pero cuando logren igualarlas es poco probable que los precios bajen.</div>
+                              </a>
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Hasta 64 Cores y 4,5 GHz, así serán los AMD Threadripper 5000</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">De los datos filtrados de los Threadripper 5000 «Chagali» lo que sorprende es la cantidad de memoria caché de tercer nivel, los rumores hablaban de la integración a última hora de la V-Cache, sin embargo, no ha sido así y como se puede ver la cantidad de esta caché por CCD es la misma que la de un Zen 3 estándar.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Samsung no cumple con NVIDIA: no habrá suficiente stock de RTX 30</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Samsung no está centrada en ampliar la capacidad de producción de este nodo mediante nuevas Fab. En cambio y contrariamente a lo que se piensa, sí que está a punto de construir varias más para los siguientes nodos de alto rendimiento. Es decir, no va a cumplir con la tasa de producción que requiere NVIDIA y por lo tanto el suministro de GPUs RTX 30 será el mismo hasta que la compañía cierre el grifo para dar vida a las RTX 40 con los 5 nm de TSMC.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral_2">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Ofertón en la CPU Intel Core i5-11400 ¡jamás ha estado tan barato!</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Si miramos atrás allá por estas fechas en el año pasado nos acordaremos de que este procesador fue lanzado al mercado con un precio que rondaba los 200 euros, siendo su MSRP 182 dólares. Un año después Alder Lake lo ha cambiado todo y ahora podemos disfrutar de la potencia generacional de este Core 11 a un precio que no lo podíamos creer cuando lo hemos visto.</div>
+                              </a>
+                              
+                            </div>
+                        </div>
+                        <h1 class="mt-4">Perifericos</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"> Informacion Productos</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Monitores</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4  col-lg-4 col-md-4 col-sm-4">
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body">Raton</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Teclado</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row py-4">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="zowie.jpg" class="img-fluid rounded img-thumbnail imagen"  >
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="periferico.jpg" class="img-fluid rounded img-thumbnail imagen " >
+                            </div>
+                        </div>
+                        <div class="container-fluid py-4 bg-dark" >
+                            
+                                <h1 class="display-3 text-white  align-items-justify py-2">
+                                    BenQ ZOWIE XL2411P 24" LED 144Hz e-Sports
+                                </h1>
+                                <p class="lead text-white text-justify">
+                                    BenQ ZOWIE XL2411P es un monitor para PC que puede ser utilizado para pasar muchas horas practicando gaming en el ordenador. Posee un panel TN con retroiluminación WLED y un montón de entradas de video digitales que se pueden utilizar simultáneamente para diversas fuentes. Además, hay que destacar que esta marca de monitores, BenQ, es la que se utiliza oficialmente en los torneos de e-Sports como DreamHack, ESL, MGL,…<br>
+                                </p>
+
+                                <p>
+                                    <img src="zowie.jpg" width="500px" height="500px" class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                </p>
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-warning"><a href="https://www.pccomponentes.com/benq-zowie-xl2411p-24-led-144hz-e-sports?utm_source=366489&utm_medium=afi&utm_campaign=www.giztele.com&awc=20982_1644750430_322ddd65a5cbe9b4986202e44f0c1fdd&utm_term=deeplink&utm_content=giztele">BenQ ZOWIE XL2411P 24" </a></li>
+                                </ul>
+
+                                <h1 class="display-3 text-white  align-items-justify py-2">
+                                    Teclado gaming 
+                                </h1>
+
+                                <p class="lead text-white text-justify">
+                                    Los teclados para juegos o gaming se centran en los mecanismos Cherry MX rojo y negro, pero los marrones también son bastante frecuentes. El primero requiere poca fuerza de actuación, y por lo tanto son de respuesta rápida, buenos para juegos que se requiere aporrear literalmente el teclado continuamente. En el caso de los Cherry negros, estas teclas necesitan mayor fuerza de actuación, por lo que son mejores para juegos en los que necesites evitar pulsaciones involuntarias de las teclas, algo habituales con los Cherry rojo<br>
+                                    <br>Personalmente encuentro los mecanismos MX marrones de la alemana Cherry como estupendos para escribir y jugar, sobre todo si la calidad de la tecla acompaña —como en los Corsair Gaming K70 o K95.
+                                </p>
+
+                                <p>
+                                    <img src="teclado.jpg" width="500px" height="500px" class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                </p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-info"><a href="https://www.pccomponentes.com/newskill-suiko-teclado-mecanico-gaming-full-rgb-switch-kailh-blue">Newskill Suiko Teclado Mecánico Gaming Full RGB </a></li>
+                                </ul>
+                                
+                                <h1 class="display-3 text-white  align-items-justify py-2">
+                                    ¿Qué debes tener en cuenta en un ratón gaming?
+                                </h1>
+
+                                <p class="lead text-white text-justify">
+                                    Los ratones gaming son una variedad de periféricos orientados completamente a sacarle todo el partido a tus videojuegos. Especialmente, por su construcción y características están muy pensados para optimizar tus partidas competitivas y usarlos de forma intensiva durante horas. Esto es lo que debes tener en cuenta antes de comprarlos:<br>
+                                    <br><b>Tipo de ratón.</b> En el mundo de los ratones gaming hay dos grandes grupos: los que ofrecen tecnología óptica y los que funcionan por láser. Ambos tipos de sensores pueden ofrecer una gran experiencia, pero los ratones ópticos tienen una precisión ligeramente mejor.<br>
+                                    <br><b>Conectividad.</b> La otra gran cuestión es si vas a elegir un ratón inalámbrico o con cable. Los primeros ofrecen mayor comodidad, pero deberás tener en cuenta la duración de la batería, que se consumirá antes si usas la iluminación RGB, además de la latencia.<br>
+                                    <br><b>Bluetooth o 2,4 G.</b> Si optas por una conexión inalámbrica, el bluetooth te ofrece más versatilidad para cambiar entres dispositivos, pero tiene mayor latencia que los modelos con dongle y 2,4 GHz.<br>
+                                    <br><b>Tipo de agarre.</b> Los ratones gaming más cómodos son los que cuentan con agarre de palma, dado que toda la mano descansa sobre el ratón.<br>
+                                    <br><b>DPI.</b> Por último, deberás buscar los que ofrezcan mayor DPI o CPI, que son a grandes rasgos lo mismo. Cuanto mayor sea este valor, más sensibilidad tendrá tu ratón gaming.<br>
+
+                                    <p>
+                                        <img src="razer-raton.jpg" width="500px" height="500px" class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                    </p>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item bg-info"><a href="https://www.pccomponentes.com/razer-deathadder-v2-raton-gaming-20000dpi">Razer DeathAdder V2 Ratón Gaming 20000DPI</a></li>
+                                    </ul>
+
+                                    <h1 class="display-3 text-white  align-items-justify py-2">
+                                        Astros A50
+                                    </h1>
+
+                                    <p>
+                                        <img src="astros50.jpg" width="500px" height="500px" class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                    </p>
+    
+                                    <p class="lead text-white text-justify">
+                                        El sonido es un aspecto importante de un videojuego, y la capacidad de comunicarse con tus aliados y tus enemigos es una parte importante de los juegos en modo multijugador. Debido a esto, unos auriculares inalámbricos de juego de calidad son un elemento vital en el arsenal de cualquier jugador.<br>
+                                        <br>A un precio de 300 euros, los Astro A50 Wireless 7.1 son uno de los auriculares para juegos más caros en el mercado, pero dada su excelente calidad de audio, su diseño cómodo, y compatibilidad tanto con PC, Xbox 360 y PlayStation 4, son actualmente los mejores que he probado. Suenan estelares, se sienten bien, y tienen la comodidad de un auricular inalámbrico, ganándose el puesto de Nuestra Selección del Editor para auriculares de videojuegos.<br>
+
+                                    </p>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item bg-warning"><a href="https://www.pccomponentes.com/astro-gaming-auriculares-inalambricos-a50-estacion-base-ps4-pc-mac">Astro Gaming Auriculares Inalámbricos A50 +</a></li>
+                                    </ul>
+                                </p>
+
+
+                            <div class="container-fluid">   
+                           
+                            
+                            </div>
+                            
+                           
+
+                            
+                        </div>
+
+
+
+
+
+                        <div class="card mb-4">
+                            
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-dark mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                
+                                <a href="#">Privacy Policy</a>
+                                
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

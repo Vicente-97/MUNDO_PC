@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MUNDO PC</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css%22%3E">
+    </head>
+    <style>
+
+        .alto{
+            float: right
+;
+        }
+        .lateral{
+            background:#52c8e6;
+            
+        }
+
+        .lateral_2{
+            background-color: rgb(250, 173, 145);
+        }
+
+        .imagen{
+            width: 500px; height: 300px;
+            
+
+        }
+
+        .imagen_graficas{
+            width: 600px; height: 500px;
+        }
+    </style>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">MUNDO PC <img src="logo_bien.png" width="50px" height="50px"></a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Opciones</a></li>
+                        <li><a class="dropdown-item" href="#!">Actividad</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Mundo PC
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Productos</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Informacion y Noticias
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html"> Informacion de Componentes</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-sidenav-light.html"> PC Premontados</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="ram.html"> Modulos RAM</a>
+                                    
+                                </nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="perifericos.html"> Perifericos</a>
+                                    
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Acceso
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Autentificacion
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Registrate</a>
+                                            <a class="nav-link" href="password.html">Olvidaste la contraseña</a>
+                                        </nav>
+                                    </div>
+                                    
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Zona Contacto</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Estas ahora mismo en:</div>
+                        MUNDO PC
+                        <a class="btn" href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="align"></div>
+
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white alto" style="width: 380px;">
+                            <a href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                              <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                              <span class="fs-5 fw-semibold"><h2 class="display-6">Lista de Novedades</h2></span>
+                            </a>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                              <a href="" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between ">
+                                  <strong class="mb-1">
+                                    Los precios de los componentes de PC podrían no bajar nunca</strong>
+                                  <small></small>
+                                </div>
+                                <div class="col-10 mb-1 small">No hay que ser muy inteligente para entender hacia dónde va la industria: aumento de precio constante y paulatino de cualquier componente para PC que integre un semiconductor. El problema es que la industria subcontrata a otras empresas que a su vez necesitan a subsidiarias que trabajan con materias primas donde hoy todavía están en déficit en cuanto a oferta y demanda, pero cuando logren igualarlas es poco probable que los precios bajen.</div>
+                              </a>
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Hasta 64 Cores y 4,5 GHz, así serán los AMD Threadripper 5000</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">De los datos filtrados de los Threadripper 5000 «Chagali» lo que sorprende es la cantidad de memoria caché de tercer nivel, los rumores hablaban de la integración a última hora de la V-Cache, sin embargo, no ha sido así y como se puede ver la cantidad de esta caché por CCD es la misma que la de un Zen 3 estándar.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral" aria-current="true">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Samsung no cumple con NVIDIA: no habrá suficiente stock de RTX 30</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Samsung no está centrada en ampliar la capacidad de producción de este nodo mediante nuevas Fab. En cambio y contrariamente a lo que se piensa, sí que está a punto de construir varias más para los siguientes nodos de alto rendimiento. Es decir, no va a cumplir con la tasa de producción que requiere NVIDIA y por lo tanto el suministro de GPUs RTX 30 será el mismo hasta que la compañía cierre el grifo para dar vida a las RTX 40 con los 5 nm de TSMC.</div>
+                              </a>
+                             
+                              <a href="" class="list-group-item list-group-item-action py-3 lh-tight lateral_2">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                  <strong class="mb-1">
+                                    Ofertón en la CPU Intel Core i5-11400 ¡jamás ha estado tan barato!</strong>
+                                  <small class="text-muted"></small>
+                                </div>
+                                <div class="col-10 mb-1 small">Si miramos atrás allá por estas fechas en el año pasado nos acordaremos de que este procesador fue lanzado al mercado con un precio que rondaba los 200 euros, siendo su MSRP 182 dólares. Un año después Alder Lake lo ha cambiado todo y ahora podemos disfrutar de la potencia generacional de este Core 11 a un precio que no lo podíamos creer cuando lo hemos visto.</div>
+                              </a>
+                              
+                            </div>
+                          </div>
+                        <h1 class="mt-4">Noticias</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active"> Informacion Productos</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Tarjetas Graficas</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6  col-lg-6 col-md-6 col-sm-6">
+                                <div class="card bg-dark text-white mb-4">
+                                    <div class="card-body">Procesadores</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#"></a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           
+                        </div>
+                        <div class="row py-4">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="nvidia.jpg" class="img-fluid rounded img-thumbnail "  >
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <img src="NVIDIA-vs-AMD-tarjetas-graficas.jpg" class="img-fluid rounded img-thumbnail " >
+                            </div>
+                        </div>
+                        <div class="container-fluid py-4 bg-dark" >
+                            
+                                <h1 class="display-3 text-white  align-items-justify py-2">
+                                    AMD vs NVIDIA, ¿qué tarjeta gráfica deberías comprar para tu PC gaming?
+                                </h1>
+                                <p class="lead text-white text-justify">
+                                    A la hora de comprar una nueva tarjeta gráfica para nuestro PC gaming, siempre nos viene a la mente el eterno debate: AMD vs NVIDIA, ¿qué tarjeta gráfica debería comprar? En esta guía de compra vamos a recomendaros qué tarjeta gráfica sería mejor comprar dependiendo de la gama de vuestro PC y, por supuesto, del dinero que os queráis gastar. Vamos a verlo.<br>
+                                    <br>Antes de empezar, vamos a aclarar que hablamos de tarjetas gráficas para un PC orientado al gaming, y por lo tanto establecemos unos mínimos en los que omitimos las gráficas de gama baja convencionales, es decir, aquellas que sirven para poco más que jugar a juegos sencillos a resoluciones Full HD. Buscamos gráficas que nos permitan disfrutar al máximo de los juegos sea cual sea nuestro presupuesto.<br>
+                                    <br>
+                                    <hr color="white">
+                                </p>
+
+                                <p>
+                                    <h1 class="display-5 text-white  align-items-justify py-2">
+                                        AMD vs NVIDIA, ¿qué gráfica deberías comprar según tu presupuesto?
+                                    </h1>
+                                </p>
+
+                                <p class="lead text-white text-justify">
+                                    A la hora de comprar cualquier componente de hardware siempre vamos a tener un factor limitante: el presupuesto (salvo que tengas un «bolsillo afortunado» y no tengas problemas de presupuesto, claro. Por ese motivo, a continuación vamos a recomendarte qué tarjeta gráfica AMD o NVIDIA comprar según la gama, y como ya hemos indicado partimos de una gama baja que en realidad ronda los 200 euros hasta la gama muy alta, prácticamente sin límite de presupuesto, donde «habitan» las gráficas de más de 1.000 euros.<br>
+                                </p>
+                                
+                                <p>
+                                    <h1 class="display-6 text-white  align-items-justify py-2">
+                                        Gama baja: AMD Radeon RX 5500 XT 8 GB
+                                    </h1>
+
+                                    <p>
+                                        <img src="5500 xt.jpg"  class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                    </p>
+
+                                    <p class="lead text-white text-justify">
+                                        En el ámbito AMD vs NVIDIA de la gama baja, creemos que las nuevas Radeon RX 5500 XT 8 GB son las reinas ahora mismo. Con unos precios que rondan los 200 euros, estas gráficas nos van a permitir jugar a casi cualquier juego actual a resolución Full HD con unos detalles gráficos en alto y a unos FPS muy dignos. Además, como ya vimos, merece la pena y mucho el incremento de precio de los modelos de 8 GB frente a los de 4 GB.
+                                    </p>
+
+                                    <p>
+                                        <h1 class="display-6 text-white  align-items-justify py-2">
+                                            Gama media-baja: NVIDIA GeForce GTX 1660
+                                        </h1>
+                                    </p>
+
+                                    <p>
+                                        <img src="1660.jpg" class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                    </p>
+
+                                    <p class="lead text-white text-justify">
+                                        Por poco más de lo que cuestan las anteriores tenemos estos modelos de NVIDIA, las GTX 1660, que no llegan a ser gama media por rendimiento pero que también nos proporcionarán un rendimiento muy digno en juegos a resolución Full HD. De media, estas gráficas nos entregan un rendimiento en torno a un 25% superior a las RX 5500 de AMD, así que si tu presupuesto te lo permite, deberían ser la opción a escoger.
+                                    </p>
+
+                                    <p>
+                                        <h1 class="display-6 text-white  align-items-justify py-2">
+                                            Gama media: NVIDIA GeForce GTX 1660 Ti
+                                        </h1>
+
+                                        <p>
+                                            <img src="1660 ti.jpg" class="img-fluid rounded img-thumbnail imagen_graficas" >
+                                        </p>
+
+                                        <p class="lead text-white text-justify">
+                                            Si os fijáis, estamos sumando 50 euros al precio de las tarjetas gráficas cada vez que subimos de gama. Estas GeForce GTX 1660 Ti de NVIDIA nos permitirán ya jugar a algunos juegos incluso a resoluciones 1440p, por lo que ya pertenecen a la gama media. En términos empíricos nos ofrecen un incremento de rendimiento de en torno al 15% de media con respecto a las anteriores.
+                                        </p>
+
+                                        <p>
+                                            <h1 class="display-6 text-white  align-items-justify py-2">
+                                                Gama media-alta: AMD Radeon RX 5700
+                                            </h1>
+                                        </p>
+
+                                        <p>
+                                            <img src="5700x.png" class="img-fluid rounded img-thumbnail imagen_graficas" > 
+                                        </p>
+
+                                        <p class="lead text-white text-justify">
+                                            Volvemos a incrementar en 50 euros el presupuesto y ya estamos hablando de gráficas cuyo precio parte de los 350 euros en el modelo más barato, pero que nos proporcionarán un incremento de rendimiento de un 20% de media con respecto a las gráficas anteriores.
+
+Esto, aunado a sus 8 GB de memoria dedicada, hacen de las RX 5700 una elección idónea para aquellos usuarios que quieren jugar a resolución Full HD y con todo al máximo, especialmente para aquellos con monitores de 144 Hz o más. Por supuesto, también se desenvuelven perfectamente en resoluciones 1440p, aunque para 4K se quedan todavía cortas
+                                        </p>
+
+                                        <p>
+                                            <h1 class="display-6 text-white  align-items-justify py-2">
+                                                Gama alta: NVIDIA GeForce RTX 2080 Ti
+                                            </h1>
+                                            <p>
+                                                <img src="2080ti.jpg" class="img-fluid rounded img-thumbnail imagen_graficas" > 
+                                            </p>
+                                        </p>
+
+                                        <p class="lead text-white text-justify">
+                                            Estas RTX 2080 Ti son las gráficas para PC gaming más potentes del momento, y son las únicas que garantizan una buena experiencia de juego a resolución 4K. Lógicamente también son las más caras, pues el precio del modelo más barato supera los 1.100 euros y por ello solo están al alcance de unos pocos, pero el incremento de rendimiento con respecto a las anteriores es de media un 18%.
+
+Aquí contaremos con el mejor rendimiento a un precio acorde a lo que se espera de la serie, pero no encontraremos nada mejor para jugar.
+
+                                        </p>
+
+                                        <p>
+                                            <h1 class="display-6 text-white  align-items-justify py-2">
+                                                AMD vs NVIDIA, ¿qué gráfica es mejor comprar?<br>
+                                            </h1>
+                                            
+                                        </p>
+
+                                        <p class="lead text-white text-justify">
+                                            <br>Ya os hemos dado nuestro punto de vista sobre qué gráfica sería mejor comprar dependiendo de la gama y del presupuesto, pero al final queda a elección de cada uno por sus preferencias. Por ejemplo, puede que un usuario quiera comprar una gráfica de gama media pero la GTX 1660 Ti no le convenza porque no tiene RayTracing, y prefiera invertir un poco más e ir a por una RTX 2060.
+                                        </p>
+
+                                        <p class="lead text-white text-justify">
+                                            Al final, como siempre, queda a elección de cada uno, y por supuesto estamos seguros de que muchos de vosotros no coincidiréis con nuestros criterios. Sin embargo, según nuestras propias pruebas, estas han sido nuestras elecciones.
+
+                                        </p>
+                                        <p class="lead text-white text-justify">
+                                            Ahora que las nuevas generaciones de tarjetas gráficas tanto de NVIDIA y AMD están en la calle es inevitable comparar las unas con las otras para añadirlas a esta lista, pero la parte mala es que en la actualidad es prácticamente misión imposible comprar gráficas de unos u otros porque literalmente no hay stock. Tanto NVIDIA como AMD han hecho un «lanzamiento fantasma» y las unidades llegan a las tiendas con cuentagotas, por lo que no vamos a poder recomendaros comprar algo que no podéis comprar.<br>
+
+<br>A estas alturas, la situación sigue todavía sin normalizarse y eso que las nuevas generaciones tanto de NVIDIA como de AMD están ya a la vuelta de la esquina, y prueba de ello es que no dejan de llegar nuevas filtraciones sobre las, todavía teóricas, NVIDIA RTX 40 Series y AMD Radeon RX 7000 Series. Es de esperar que tanto NVIDIA como AMD hayan aprendido la lección y que para las próximas generaciones no vuelvan a realizar un lanzamiento fantasma, y que por fin todos los usuarios tengamos acceso a sus tarjetas gráficas.<br>
+
+
+                                        </p>
+                                    </p>
+
+                                </p>
+                              
+                                <p><a href="index.html" style="color: rgb(250, 0, 196);">Ir al Inicio</a></p>
+                                <footer class="py-4 bg-dark mt-auto">
+                                    <div class="container-fluid px-4">
+                                        <div class="d-flex align-items-center justify-content-between small">
+                                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                                            <div>
+                                                
+                                                <a href="#">Privacy Policy</a>
+                                                &middot;
+                                                <a href="#">Terms &amp; Conditions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                                
+
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
